@@ -719,7 +719,7 @@ public class Camera2VideoFragment extends Fragment
             mPreviewBuilder.addTarget(mRecorderSurface);
 
             mLogOutputFormatter = new Formatter(new FileOutputStream(mNextLogAbsolutePrefix + ".csv"));
-            mLogOutputFormatter.format("time_since_epoch_ms,sensor_time_ns,sensor_name,sensor_type,index,value");
+            mLogOutputFormatter.format("time_since_epoch_ms,sensor_time_ns,sensor_name,sensor_type,index,value\n");
             logDatum(System.nanoTime(), "video", "capture_requested", 0, 0);
 
             // Start getting updates
